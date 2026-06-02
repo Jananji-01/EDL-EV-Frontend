@@ -3210,6 +3210,10 @@ select {
   text-transform: lowercase;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -3795,7 +3799,7 @@ select {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:w-8\/12 {
-    width: 66.666667%;
+  .\32xl\:w-1 {
+    width: 0.25rem;
   }
 }
