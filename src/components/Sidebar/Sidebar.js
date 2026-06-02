@@ -101,8 +101,9 @@ export default function Sidebar() {
     { to: "/admin/solarowners",    icon: "fas fa-solar-panel",   label: "Smart Plug Owner Details" },
     { to: "/smartplug/register",   icon: "fas fa-plug",          label: "Smart Plug Registration" },
     { to: "/admin/smartplugs",     icon: "fas fa-network-wired", label: "Smart Plug Monitoring" },
-    { to: "/admin/billing-history",icon: "fas fa-history",       label: "Billing History" },
+    // { to: "/admin/billing-history",icon: "fas fa-history",       label: "Billing History" },
     { to: "/admin/create-new-admin",icon: "fas fa-user-plus",       label: "Create New Admin" },
+   
   ];
 
   let links = [];

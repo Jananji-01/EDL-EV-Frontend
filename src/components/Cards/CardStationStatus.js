@@ -132,16 +132,16 @@ export default function CardStationStatus() {
   }, []);
 
   const pieData = React.useMemo(() => {
-    // Filter stations to ONLY include "Available" and "Charging"
-    const filteredStations = stations.filter((s) => {
-      const status = s.status || "Unknown";
-      return status === "Available" || status === "Charging";
-    });
-    
-    // Count only the filtered statuses
     const counts = {};
-    filteredStations.forEach((s) => {
-      const status = s.status;
+    stations.forEach((s) => {
+      let status = s.status || "Unknown";
+      // Swap: Change "Charging" to "Available" instead
+     
+         if (status === "AVAILABLE") {
+        status = "Charging";
+      } else if (status === "available") {
+        status = "Available";
+      }
       counts[status] = (counts[status] || 0) + 1;
     });
     
